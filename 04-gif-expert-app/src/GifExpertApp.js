@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { AddCategory } from './components/AddCategory';
+import GifGrid from './components/GifGrid';
 
 const GifExpertApp = props => {
 
-    const [categories, setCategories] = useState(["Anthony", "Fernando", "Alexandra", "Richard", "Christofer"]);
+    const [categories, setCategories] = useState(["Anthony"]);
     
     // const handleAdd = ()=>{
     //         // setCategories( [...categories, "Nuevo mienbro"]);
@@ -18,17 +19,18 @@ const GifExpertApp = props => {
             <br></br>
             <ol>
                 {
-                    categories.map(category => {
-                        return <li key={category}>{category}</li>;
-                    })
+                    categories.map( category =>
+                    <GifGrid
+                    key= { category }
+                       category= { category }
+                        
+                    />
+                    )
                 }
             </ol>
         </>
     )
 }
 
-GifExpertApp.propTypes = {
-
-}
 
 export default GifExpertApp

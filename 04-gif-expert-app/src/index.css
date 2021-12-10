@@ -7,7 +7,12 @@ body{
 }
 
 input{
-  color: gray;
+  color: black;
   font-size: 1.2rem;
   width: 100%;
+  border: 2px solid grey;
+  background-color: rgb(137, 194, 137);
+  border-radius: 50px;
+  box-shadow: rgb(100, 29, 29);  
 }
+
